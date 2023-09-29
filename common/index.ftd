@@ -1,0 +1,37 @@
+
+
+-- record feature-record:
+caption title:
+body body:
+string card-no:
+string cta-text:
+string cta-link:
+
+
+
+
+
+-- feature-record list features:
+
+-- feature-record: Find Your Properties
+card-no: 01
+cta-text: Learn More
+cta-link: index.html
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, nibh nibh aliquet nunc, eget lacinia nisl
+
+-- feature-record: Find Your Properties
+card-no: 02
+cta-text: Learn More
+cta-link: index.html
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, nibh nibh aliquet nunc, eget lacinia nisl
+
+-- feature-record: Find Your Properties
+card-no: 03
+cta-text: Learn More
+cta-link: index.html
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, nibh nibh aliquet nunc, eget lacinia nisl
+
+-- end: features
