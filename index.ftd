@@ -1,40 +1,414 @@
--- ds.page: Welcome to doc-site
+-- import: saurabh-lohiya.github.io/legacy-living/common
+
+-- integer max-width: 1240
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+
+-- promo-banner: Experience Luxury Living at our Rental Properties
+
+Experience the best luxury living with our exclusive listings offering the best of the best in the city. From the most luxurious penthouses to the most exclusive villas, we have it all.
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
+-- features: Easy 3 Steps To Renting
+tag: How It Works
+features: $common.features
 
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
+-- contact-form: CONTACT US
 
--- ds.h3: 🚀 Fast Track 
+Schedule a Visit!
 
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/components/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- end: ftd.column
 
 
--- ds.h3: 🎯 Used by?
 
-Our all documentation sites uses this `doc-site` theme.
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
+-- component promo-banner:
+caption title:
+body body:
+string cta-text: CHECK OUR BEST LISTINGS
+string cta-link: index.html
 
--- ds.h2: Learn fastn and become a pro?
+-- ftd.column:
+width: fill-container
+align-content: center
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- ftd.row:
+width: fill-container
+max-width.fixed.px: $max-width
+padding-vertical.px: 20
+wrap: true
 
--- end: ds.page
+-- ftd.column:
+width.fixed.percent: 50
+padding-horizontal.px: 40
+
+-- ftd.text: $promo-banner.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+style: bold
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.text: $promo-banner.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 20
+
+-- button: $promo-banner.cta-text
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: promo-banner
+
+
+
+
+
+
+
+
+
+
+-- component contact-form:
+caption title:
+body body:
+string cta-text: SEND MESSAGE
+string cta-link: index.html
+string name-placeholder: Your Name
+string email-placeholder: Your Email
+string phone-placeholder: Your Phone
+string message-placeholder: Your Message
+ftd.image-src image: $assets.files.assets.contact-us.jpg
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.row:
+width: fill-container
+max-width.fixed.px: $max-width
+padding-vertical.px: 20
+wrap: true
+
+-- ftd.image:
+width.fixed.percent if { ftd.device == "desktop" }: 66
+width.fixed.percent if { ftd.device == "mobile" }: 100
+src: $contact-form.image
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 34
+width.fixed.percent if { ftd.device == "mobile" }: 100
+padding-left.px: 60
+
+-- ftd.text: $contact-form.title
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: $contact-form.body
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+margin-top.px: 20
+style: bold
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 20
+spacing.fixed.px: 12
+
+-- input-group: $contact-form.name-placeholder
+
+-- input-group: $contact-form.email-placeholder
+
+-- input-group: $contact-form.phone-placeholder
+
+-- input-group: $contact-form.message-placeholder
+
+-- button: $contact-form.cta-text
+cta-link: $contact-form.cta-link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: contact-form
+
+
+
+
+
+
+
+
+
+
+-- component feature-card:
+caption title:
+body body:
+string cta-text: Learn More
+string cta-link: index.html
+string card-no:
+
+-- ftd.column:
+width: fill-container
+width.fixed.px if { ftd.device == "desktop" }: 320
+background.solid: $inherited.colors.background.base
+padding.px: 40
+spacing.fixed.px: 20
+border-width.px: 1
+
+-- ftd.text: $feature-card.card-no
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+style: bold
+
+-- ftd.text: $feature-card.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+style: bold
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$feature-card.body
+
+-- ftd.text: $feature-card.cta-text
+role: $inherited.types.button-small
+link: $feature-card.cta-link
+
+-- end: ftd.column
+
+-- end: feature-card
+
+
+
+
+
+
+
+
+
+
+-- component features:
+caption title:
+body body:
+string tag:
+common.feature-record list features:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $max-width
+padding-vertical.px: 20
+
+-- ftd.row:
+width: fill-container
+wrap: true
+padding-vertical.px: 40
+
+-- ftd.column:
+width.fixed.percent: 50
+padding-horizontal.px: 40
+
+-- ftd.text: $features.tag
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $features.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+style: bold
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 50
+padding-horizontal.px: 20
+align-self: center
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$features.body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+wrap: true
+padding-vertical.px: 40
+spacing.fixed.px: 40
+align-content: center
+
+-- feature-card: $obj.title
+$loop$: $features.features as $obj
+card-no: $obj.card-no
+cta-text: $obj.cta-text
+cta-link: $obj.cta-link
+
+$obj.body
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: features
+
+
+
+
+
+
+
+
+
+
+-- component testimonials:
+caption title:
+string tag:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $max-width
+
+-- ftd.row:
+width: fill-container
+wrap: true
+padding-vertical.px: 40
+
+-- ftd.column:
+width.fixed.percent: 30
+padding-horizontal.px: 40
+
+-- ftd.text: $testimonials.tag
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $testimonials.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+style: bold
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 70
+padding-horizontal.px: 20
+align-self: center
+
+-- ftd.text: $testimonials.testimonial
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $testimonials.author
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+style: bold
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: testimonials
+
+
+
+
+
+
+
+
+
+-- component input-group:
+caption placeholder:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text-input:
+padding-vertical.px: 6
+padding-horizontal.px: 12
+width: fill-container
+border-color: $inherited.colors.border
+border-bottom-width.px: 2
+color: $inherited.colors.text
+height.fixed.px: 40
+placeholder: $input-group.placeholder
+
+-- end: ftd.column
+
+-- end: input-group
+
+
+
+
+
+
+
+
+
+
+-- component button:
+caption title:
+string cta-link: index.html
+ftd.image-src src: $assets.files.assets.right-arrow.svg
+boolean $cta-hover: false
+
+-- ftd.row:
+padding-vertical.px: 8
+padding-horizontal.px: 20
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { button.cta-hover }: $inherited.colors.cta-primary.hover
+align-content: center
+$on-mouse-enter$: $ftd.set-bool($a = $button.cta-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $button.cta-hover, v = false)
+link: $button.cta-link
+border-width.px: 2
+border-color: $inherited.colors.border
+border-color if { button.cta-hover }: $inherited.colors.text-strong
+spacing.fixed.px: 12
+
+-- ftd.text: $button.title
+color: $inherited.colors.cta-primary.text
+role: $inherited.types.button-medium
+
+-- ftd.image:
+src: $button.src
+height.fixed.px: 14
+width.fixed.px: 14
+
+-- end: ftd.row
+
+-- end: button
